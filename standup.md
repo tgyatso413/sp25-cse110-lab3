@@ -1,6 +1,6 @@
 # Daily Standup Meeting Template
 
-## Date: __/__/____
+## Date: __-__-____
 
 ### What did I accomplish today?  
 Share your progress on the sprint goals.
