@@ -4,50 +4,133 @@
   font-style: normal;
 }
 
-head {
-  font-family: "Special Gothic Condensed One";
-  position: fixed;
-  color: color(rec2020 1 2 3[ / none])
-  text-decoration: underline;
-  text-align: center;
-  min-width: 10%;
-  max-width: 100%;
+#important {
+  background-color: yellow;
+  font-weight: bold;
 }
 
-head:active {
-  color: red;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-body {
-  position: sticky;
-  height: 20px;
-  background-color: lightblue;
-} 
 
 h1 {
   color: rgb(135, 206, 250);
-  display: inline;
+  display: inline-grid;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-end: 3;
   margin-top: 5%;
   padding-top: 10%;
+}
+
+img[src*="hamster"] {
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
 }
 
 h1:hover {
   color: red;
 }
 
-div {
-  color: hsl(100, 100, 100);
-  display: block;
-  width: 300px;
-  border: 15px solid green;
-  padding: <left>;
-  margin: <left>;
+video, audio {
+  border: 2px dashed purple;
+  margin-top: 10px;
 }
+
+ol li {
+  font-style: italic;
+}
+
+div > img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 ~ ol {
+  background-color: #f9f9f9;
+}
+
+h2 + ol {
+  border: 2px dotted;
+  border-color: rgb(226, 43, 86);
+  border-width: 2px;
+}
+
+h1.special-gothic-condensed-one-regular {
+  text-transform: uppercase;
+}
+
+ol:has(li:nth-child(3)) {
+  border: 2px solid green;
+}
+
+body {
+  color: black;
+
+  & h2 {
+    text-decoration: underline;
+  }
+
+  & div {
+    margin-bottom: 20px;
+  }
+}
+
+div#important-note {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 1rem;
+    padding: 1em;
+  }
+
+  div {
+    width: 90%;
+    margin: auto;
+    border-width: 10px;
+  }
+
+  video, audio {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding-top: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+    padding: 0.5em;
+    line-height: 1.4;
+  }
+
+  h1, h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  div {
+    width: 100%;
+    border-width: 5px;
+  }
+
+  video, audio {
+    width: 100%;
+    height: auto;
+  }
+
+  ol li {
+    font-size: 0.9rem;
+  }
+}
+
+
 /*end*/
-/*
-box
-border
-lyout
-response
-font
-*/
